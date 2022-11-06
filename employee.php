@@ -1,9 +1,12 @@
 <?php
     include("./database/database_inc.php");
+    include("404.php");
     $employee_id = filter_input(INPUT_GET, "employeeId", FILTER_VALIDATE_INT);
+    if($employee_id === NULL || $employee_id === false) {
+        throw404();
+    }
     $employee = getEmployee($employee_id);
     if($employee === NULL) {
-        (include "404.php");
         throw404();
     }
     $short_name = $employee->surname . " " . mb_str_split($employee->first_name)[0] . ".";

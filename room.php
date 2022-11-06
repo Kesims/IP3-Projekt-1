@@ -1,6 +1,9 @@
 <?php
 include("./database/database_inc.php");
 $room_id = filter_input(INPUT_GET, "roomId", FILTER_VALIDATE_INT);
+if($room_id === NULL || $room_id === false) {
+    throw404();
+}
 $room = getRoom($room_id);
 if($room === NULL) {
     (include "404.php");
