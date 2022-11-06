@@ -15,10 +15,7 @@
         <?php
         include("./database/database_inc.php");
 
-        if( isset($_GET["poradi"]))
-            $sort_key = $_GET["poradi"];
-        else
-            $sort_key = "";
+        $sort_key = $_GET["poradi"] ?? "";
         $table_head = "<tr><th>Jméno<a href='?poradi=prijmeni_up'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a><a href='?poradi=prijmeni_down'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a></th><th>Místnost<a href='?poradi=nazev_up'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a><a href='?poradi=nazev_down'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a></th><th>Telefon<a href='?poradi=telefon_up'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a><a href='?poradi=telefon_down'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a></th><th>Pozice<a href='?poradi=pozice_up'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></a><a href='?poradi=pozice_down'><span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span></a></th></tr>";
         if($sort_key != "")
             $table_head = str_replace($sort_key . "'", $sort_key . "' class='sorted'", $table_head);
