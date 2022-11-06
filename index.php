@@ -14,5 +14,6 @@
         <li class="list-group-item"><a href="employee_list.php">Seznam zaměstnanců</a></li>
         <li class="list-group-item"><a href="room_list.php">Seznam místností</a></li>
     </ul>
+    <a href="https://github.com/Kesims/IP3-Projekt-1">https://github.com/Kesims/IP3-Projekt-1</a>
 </body>
 </html>

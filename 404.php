@@ -11,7 +11,11 @@ function throw404() {
 <body class="container">
 <h1>404 - Not found!</h1>
 <p>But I found something better :)))</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<video controls autoplay>
+    <source src="rickroll.mp4" type="video/mp4">
+</video>
+
 </body>
 </html>';
 
