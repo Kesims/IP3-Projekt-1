@@ -1,9 +1,13 @@
 <?php
     include("./database/database_inc.php");
     include("404.php");
+    include("400.php");
     $employee_id = filter_input(INPUT_GET, "employeeId", FILTER_VALIDATE_INT);
-    if($employee_id === NULL || $employee_id === false) {
+    if($employee_id === false) {
         throw404();
+    }
+    else if ($employee_id === NULL) {
+        throw400();
     }
     $employee = getEmployee($employee_id);
     if($employee === NULL) {
