@@ -1,6 +1,6 @@
 <?php
 function throw404() {
-
+    http_response_code(404);
     echo '<!DOCTYPE html>
 <html lang="en">
 <head>
